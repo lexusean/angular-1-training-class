@@ -4,7 +4,7 @@ angular
 
 function AppController($scope) {
 
-  $scope.title = 'List Page';
+  $scope.title = 'Yo Momma Page';
   
   $scope.heroes = [
     {
