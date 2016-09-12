@@ -13,7 +13,23 @@
     <h1>{{ title }}</h1>
     <div>
       <!-- LIST GOES HERE: -->
+      <ul class="list-group">
+        <li class="list-group-item" ng-repeat="hero in heroes">
+          <div class="row">
+            <div class="col-xs-6">
+              <h4 class="col-xs-6">{{ hero.name }}</h4>
+              <img ng-src="{{ hero.imageUrl }}"" height="100" width="100" />
+            </div>
+            <div class="col-xs-6">
+              <p>Power: {{ hero.power }}</p>
+              <p>Light: {{ hero.light }}</p>
+              <p>Affiliations: <span ng-repeat="affiliation in hero.affiliations">{{ affiliation }} </span></p>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
+
   </div>
 </body>
 </html>
