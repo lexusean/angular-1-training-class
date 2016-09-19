@@ -11,7 +11,7 @@ angular
 function appConfig($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
   $routeProvider
-    .otherwise('/heros#');
+    .otherwise('/heros');
 }
 
 function AppController($scope, heroService) {

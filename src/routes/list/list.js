@@ -12,11 +12,6 @@ function listConfig($routeProvider) {
       controller: ListController,
       templateUrl: 'heros/src/routes/list/list.tpl.html'
     });
-  $routeProvider
-    .when('/heros#', {
-      controller: ListController,
-      templateUrl: 'heros/src/routes/list/list.tpl.html'
-    });
 }
 
 function ListController($scope, heroService) {
