@@ -3,7 +3,7 @@ angular
   .factory('heroService', heroService);
 
 function heroService() {
-  
+
   var heroes = [
     {
       id: 0,
@@ -51,6 +51,22 @@ function heroService() {
       imageUrl: 'images/jangoFett.png',
       power: 7000,
       affiliations: ['Bounty Hunter', 'Mandalorian'],
+      light: false
+    },
+    {
+      id: 14,
+      name: 'Captain Rex',
+      imageUrl: 'http://www.sideshowtoy.com/wp-content/uploads/2014/02/100222-product-silo3.png',
+      power: 2000,
+      affiliations: ['Clone Trooper', 'New Republic'],
+      light: true
+    },
+    {
+      id: 15,
+      name: 'Andy',
+      imageUrl: 'images/aswanson.jpeg',
+      power: 40000,
+      affiliations: ['Beer', 'Crown', 'Boating', 'D-Bag'],
       light: false
     },
   ];

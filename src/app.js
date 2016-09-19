@@ -11,7 +11,7 @@ function appConfig($routeProvider) {
 }
 
 function AppController($scope, heroService) {
-  $scope.title = 'List Page';
+  $scope.title = 'Jacob\'s Crushes Page';
   
   $scope.heroes = heroService.getAll();
 }

@@ -13,7 +13,7 @@
   <script src="src/routes/list/list.js"></script>
 </head>
 <body ng-app="app">
-  <div ng-controller="AppController" class="container">
+  <div ng-controller="AppController" class="container-fluid">
     <h1>{{ title }}</h1>
     <div>
       <!-- LIST GOES HERE: -->
@@ -21,6 +21,7 @@
         <li class="list-group-item" ng-repeat="hero in heroes">
           <div class="row">
             <h4 class="col-xs-6">{{ hero.name }}</h4>
+            <img ng-src="{{ hero.imageUrl }}"" height="150" width="150" />
             <div class="col-xs-6">
               <p>Power: {{ hero.power }}</p>
               <p>Light: {{ hero.light }}</p>
