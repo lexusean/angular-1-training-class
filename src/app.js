@@ -1,17 +1,19 @@
 angular
   .module('app', [
     'hero',
-    'ngRoute'
+    'ngRoute',
+    'list',
+    'detail'
   ])
   .config(appConfig)
   .controller('AppController', AppController);
 
-function appConfig($routeProvider) {
-
+function appConfig($routeProvider, $locationProvider) {
+  $locationProvider.html5Mode(true);
+  $routeProvider
+    .otherwise('/heros#');
 }
 
 function AppController($scope, heroService) {
-  $scope.title = 'Jacob\'s Crushes Page';
-  
-  $scope.heroes = heroService.getAll();
+
 }

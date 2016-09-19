@@ -8,7 +8,7 @@ function heroService() {
     {
       id: 0,
       name: 'Luke Skywalker',
-      imageUrl: 'images/luke.png',
+      imageUrl: 'heros/images/luke.png',
       power: 9000,
       affiliations: ['Jedi', 'Rebel'],
       light: true
@@ -16,7 +16,7 @@ function heroService() {
     {
       id: 1,
       name: 'R2D2',
-      imageUrl: 'images/r2d2.png',
+      imageUrl: 'heros/images/r2d2.png',
       power: 2000,
       affiliations: ['Droid', 'Rebel'],
       light: true
@@ -24,7 +24,7 @@ function heroService() {
     {
       id: 2,
       name: 'Chewie',
-      imageUrl: 'images/chewie.png',
+      imageUrl: 'heros/images/chewie.png',
       power: 6000,
       affiliations: ['Scoundrel', 'Rebel'],
       light: true
@@ -32,7 +32,7 @@ function heroService() {
     {
       id: 3,
       name: 'Darth Maul',
-      imageUrl: 'images/darthMaul.png',
+      imageUrl: 'heros/images/darthMaul.png',
       power: 8000,
       affiliations: ['Sith'],
       light: false
@@ -40,7 +40,7 @@ function heroService() {
     {
       id: 4,
       name: 'Darth Vader',
-      imageUrl: 'images/darthVader.png',
+      imageUrl: 'heros/images/darthVader.png',
       power: 10000,
       affiliations: ['Sith', 'Empire'],
       light: false
@@ -48,7 +48,7 @@ function heroService() {
     {
       id: 5,
       name: 'Jango Fett',
-      imageUrl: 'images/jangoFett.png',
+      imageUrl: 'heros/images/jangoFett.png',
       power: 7000,
       affiliations: ['Bounty Hunter', 'Mandalorian'],
       light: false
@@ -64,7 +64,7 @@ function heroService() {
     {
       id: 15,
       name: 'Andy',
-      imageUrl: 'images/aswanson.jpeg',
+      imageUrl: 'heros/images/aswanson.jpeg',
       power: 40000,
       affiliations: ['Beer', 'Crown', 'Boating', 'D-Bag'],
       light: false
@@ -72,12 +72,21 @@ function heroService() {
   ];
 
   var service = {
-    getAll: getAll
+    getAll: getAll,
+    get: get
   };
 
   function getAll() {
     console.log('hero::heroService::getAll');
     return heroes;
+  }
+
+  function get(heroId) {
+    var h = heroes.filter(function(hero) {
+      return hero.id === heroId;
+    });
+
+    return h[0];
   }
 
   return service;
