@@ -1,0 +1,17 @@
+<li class="list-group-item">
+    <a ng-click="onClickHero({ hero: hero})" class="row">
+        <div>
+            <h4 class="col-xs-6">{{ hero.name }}</h4>
+            <img ng-src="{{ hero.imageUrl }}"" height="150" width="150" />
+            <div class="col-xs-6">
+                <p>Power: {{ hero.power }}</p>
+                <p>Light: {{ hero.light }}</p>
+                <p>Affiliations: 
+                    <span ng-repeat="affiliation in hero.affiliations">
+                        {{affiliation}} {{$last ? '' : ($index==hero.affiliations-2) ? ' and ' : ', '}} 
+                    </span>
+                </p>
+            </div>
+        </div>
+    </a>
+</li>
