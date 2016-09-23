@@ -69,7 +69,7 @@ function heroService($http, $q) {
       /*
       return $http.get('data/heroes.json').then(function(res) {
         ...
-        set global heroes and then return the array
+        set global heroes (with res.data) and then return the array
         ...
       });
       */
