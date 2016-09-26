@@ -17,7 +17,7 @@
 </div>
 <div class="col-xs-6">
     <p>Power: <input type="number" ng-model="hero.power"></p>
-    <p>Light: {{ hero.light }}</p>
+    <p>Light: <input type="checkbox" ng-model="hero.light"></p>
     <p>Affiliations: 
       <span ng-repeat="affiliation in hero.affiliations">
         {{affiliation}} {{$last ? '' : ($index==hero.affiliations-2) ? ' and ' : ', '}}
