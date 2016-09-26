@@ -18,9 +18,6 @@ function ListController($scope, heroService, $location) {
   
   $scope.title = 'List Page';
 
-  $scope.factions = [ { type: 'All' }, {type: 'Dark' }, 'Light'];
-  $scope.selectedFactions = 'All';
-
   $scope.heroes = [];
 
   heroService.getAll().then(function(heroes) {

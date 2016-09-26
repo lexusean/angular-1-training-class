@@ -1,3 +1,14 @@
-<ul class="list-group">
-    <hero-list-item hero="hero" on-click-hero="onClickHero({ hero: hero })" ng-repeat="hero in heroes"></hero-list-item>
-</ul>
+<div>
+    <div class="row">
+        <div class="col-xs-offset-8 col-xs-4 form-inline">
+            <div class="form-group">
+                <label for="force-select">Faction</label>
+                <select id="force" class="form-control" ng-options="faction as faction.label for faction in factions" ng-model="selectedFaction"></select>
+            </div>
+        </div>
+    </div>
+
+    <ul class="list-group">
+        <hero-list-item hero="hero" on-click-hero="onClickHero({ hero: hero })" ng-repeat="hero in heroes | filter:heroFilter | orderBy:'-power'"></hero-list-item>
+    </ul>
+</div>
