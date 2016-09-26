@@ -9,9 +9,9 @@ angular
 
 function detailConfig($routeProvider) {
   $routeProvider
-    .when('/detail/:id', {
+    .when('/heros/detail/:id', {
       controller: DetailController,
-      templateUrl: 'src/routes/detail/detail.tpl.html'
+      templateUrl: 'heros/src/routes/detail/detail.tpl.html'
     });
 }
 
@@ -23,7 +23,7 @@ function DetailController($scope, $routeParams, heroService, $location) {
   $scope.hero = heroService.get($scope.heroId);
 
   $scope.gotoList = function() {
-    $location.path('/list');
+    $location.path('/heros/list');
   }
 
 }

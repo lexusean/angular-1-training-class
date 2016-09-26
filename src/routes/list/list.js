@@ -8,9 +8,9 @@ angular
 
 function listConfig($routeProvider) {
   $routeProvider
-    .when('/', {
+    .when('/heros', {
       controller: ListController,
-      templateUrl: 'src/routes/list/list.tpl.html'
+      templateUrl: 'heros/src/routes/list/list.tpl.html'
     });
 }
 
@@ -21,7 +21,7 @@ function ListController($scope, heroService, $location) {
   $scope.heroes = heroService.getAll();
 
   $scope.gotoDetail = function(hero) {
-    $location.path('detail/' + hero.id);
+    $location.path('heros/detail/' + hero.id);
   };
 
 }

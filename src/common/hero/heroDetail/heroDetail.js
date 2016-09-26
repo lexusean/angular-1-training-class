@@ -11,7 +11,7 @@ function heroDetail() {
             onClose: '&'
         },
         controller: heroDetailController,
-        templateUrl: 'src/common/hero/heroDetail/heroDetail.tpl.html'
+        templateUrl: 'heros/src/common/hero/heroDetail/heroDetail.tpl.html'
     };
 }
 

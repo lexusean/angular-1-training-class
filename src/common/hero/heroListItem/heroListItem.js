@@ -11,7 +11,7 @@ function heroListItem() {
             onClickHero: '&'
         },
         controller: heroListItemController,
-        templateUrl: 'src/common/hero/heroListItem/heroListItem.tpl.html'
+        templateUrl: 'heros/src/common/hero/heroListItem/heroListItem.tpl.html'
     };
 }
 
