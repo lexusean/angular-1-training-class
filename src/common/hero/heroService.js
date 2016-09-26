@@ -65,7 +65,7 @@ function heroService($http, $q) {
     console.log('hero::heroService::getAll');
     if (heroes.length === 0) {
       // get heroes from data/heroes.json
-      // and set heroes to the value returned in the resonse
+      // and set heroes to the value returned in the response
       /*
       return $http.get('data/heroes.json').then(function(res) {
         ...
@@ -74,13 +74,16 @@ function heroService($http, $q) {
       });
       */
     } else {
-      // return heroes in a promise
+      // return heroes in a promise that is resolved immediately ($q.when)
     }
     // REMOVE THIS
     return heroes;
   }
 
   function get(id) {
+    // We are getting a single item, but let's
+    // get all items first, which will make the http
+    // request if needed, then return the one we need
     /*
     return service.getAll().then(function(heroes) {
       // move filtering here
